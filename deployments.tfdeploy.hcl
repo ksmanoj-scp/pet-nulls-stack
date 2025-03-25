@@ -15,11 +15,14 @@ deployment "complex" {
   }
 }
 
-orchestrate "auto_approve" "auto_approve_plans" {
+orchestrate "auto_approve" "auto_approve_simple" {
   check {
     condition = context.plan.deployment == deployment.simple
     reason    = "auto approve for load tests"
   }
+}
+
+orchestrate "auto_approve" "auto_approve_complex" {
   check {
     condition = context.plan.deployment == deployment.complex
     reason    = "auto approve for load tests"
