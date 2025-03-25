@@ -14,3 +14,7 @@ deployment "complex" {
     instances        = 3
   }
 }
+
+orchestrate "auto_approve" "auto_approve_plans" {
+
+}
